@@ -42,10 +42,8 @@ function Loginpage() {
 
   const registerUser = async (currentUser) => {
     try {
-      const response = await axios.post(
-        `temp-project-pi.vercel.app/api/user/register`,
-        currentUser
-      );
+      // const response = await axios.post(`temp-project-pi.vercel.app/api/user/register`, currentUser);
+      const response = await axios.post(`food-delivery-app-livid.vercel.app/api/user/register`, currentUser);
       const { user, token } = response.data;
       addUserToLocalStorage({ user, token });
       if (user) {
@@ -61,7 +59,7 @@ function Loginpage() {
   const loginUser = async (currentUser) => {
     try {
       const response = await axios.post(
-        `temp-project-pi.vercel.app/api/user/login`,
+        `food-delivery-app-livid.vercel.app/api/user/login`,
         currentUser
       );
       const { user, token } = response.data;
