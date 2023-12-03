@@ -1,0 +1,141 @@
+/* FoodCard.css */
+
+.food-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  transition: all 0.2s;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* flex-grow: 1;
+  flex-basis: 200; */
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.food-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(0.99);
+}
+
+.food-image-container {
+  display: flex;
+  justify-content: center;
+  border: gray;
+}
+
+.food-image img {
+  /* width: 100%; */
+  height: 200px;   /*Set a fixed height for the image */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+.food-card:hover .food-image img {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+.food-image-container{
+    border-radius: 10px;
+}
+
+.food-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.food-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.food-description {
+  font-size: 16px;
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: baseline;
+  margin-top: 10px;
+}
+
+.food-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+.add-to-cart-button:active {
+  background-color: #053a72;
+}
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 700px) {
+    .food-card {
+      width: 100%; /* Full width on tablet-sized screens */
+    }
+  
+    .food-image img {
+      height: 200px; /* Adjust height as needed */
+    }
+  
+    .food-description {
+      font-size: 14px; /* Smaller font size on tablet-sized screens */
+    }
+  
+    .food-name {
+      font-size: 18px; /* Adjust font size for tablet-sized screens */
+    }
+  }
+  
+  /* Responsive styles for phone-sized screens */
+  @media (max-width: 480px) {
+    .food-card {
+      width: 100%; /* Full width on phone-sized screens */
+    }
+  
+    .food-image img {
+      height: 160px; /* Adjust height as needed for smaller screens */
+    }
+  
+    .food-description {
+      font-size: 12px; /* Smaller font size on phone-sized screens */
+    }
+  
+    .food-name {
+      font-size: 16px; /* Adjust font size for phone-sized screens */
+    }
+  
+    .food-price {
+      font-size: 16px; /* Adjust font size for phone-sized screens */
+    }
+  
+    .add-to-cart-button {
+      padding: 6px 12px; /* Adjust button size for smaller screens */
+    }
+  }

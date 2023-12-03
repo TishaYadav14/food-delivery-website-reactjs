@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  color: black;
+  overflow-x: hidden;
+  background-color: white;
+
+}
+
+#root{
+  height: 100%;
+}
+
+.App {
+  /* text-align: center; */
+  height: 100vh;
+}
